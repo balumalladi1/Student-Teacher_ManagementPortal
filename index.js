@@ -11,7 +11,7 @@ const bodyparser=require("body-parser")
 
 dotenv.config()
 app.use(cors())
-Port=4000;
+Port= process.env.PORT || 4000;
 
 app.listen(Port,()=>{
     console.log(`The app is connected to server ${Port}`)
